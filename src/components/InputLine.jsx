@@ -3,8 +3,12 @@ import { useRef, useEffect } from "react";
 export default function InputLine({author, className, setInputValue}) {
     const ref= useRef();
 
-    function changeHandler(e) {
-        setInputValue(e.target.value);
+
+    function keydownHandler(e) {
+        if (e.key === "Enter") {
+            console.log("Enter pressed");
+            setInputValue(e.target.value);
+      }
     }
 
     useEffect(() => {
@@ -15,7 +19,7 @@ export default function InputLine({author, className, setInputValue}) {
       <span className={`input-line ${className}`}>
         
         <span className="input-line-prompt">{author}{' >> '}</span>
-        <input className="input-line-input input" ref={ref} onChange={changeHandler}/>
+        <input className="input-line-input input" ref={ref} onKeyDown={keydownHandler} />
       </span>
     );
 }

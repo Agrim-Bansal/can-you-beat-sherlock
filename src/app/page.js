@@ -13,26 +13,14 @@ export default function Home() {
 
 
   const [history, setHistory] = useState([{author: "system", text: "Welcome to the chat!"}, {author:"system", text: "Type something and press enter to send a message."}]);
-  
 
   useEffect(() => {
-    const enterHandler = (e) => {
-      if (e.key === "Enter") {
-        console.log("Enter pressed");
-        
-        var newHistory = [...history];
-        
-        newHistory.push({author: userName, text: inputValue});
-        console.log(newHistory);
-        setHistory(newHistory);
-      }
+    if (inputValue) {
+      setHistory([...history, {author: userName, text: inputValue}]);
+      setInputValue("");
     }
-  
-    window.removeEventListener('keydown', enterHandler);
-    document.querySelector('.input-line-input').addEventListener("keydown", enterHandler);
+  }, [inputValue]);
 
-    
-  });
 
   let historyElements = history.map((line, index) => {
     return (
@@ -48,27 +36,12 @@ export default function Home() {
     </Line>
   );   
 
-  useEffect(() => {
-    let historyElements = history.map((line, index) => {
-      return (
-        <Line key={history.length*10000 + index} author={line.author} setTyping={setTyping} renderAnimation={false}>
-          {line.text}
-        </Line>
-      );
-    });
-  
-    historyElements[historyElements.length - 1] = (
-      <Line key={history.length*10000 + historyElements.length-1} author={history[history.length - 1].author} setTyping={setTyping} renderAnimation={true}>
-        {history[history.length - 1].text}
-      </Line>
-    ); 
-  }, [history]);
 
   return (
     <>
 
       {historyElements}
-      <InputLine author="Agrim" className={typing ? "hidden" : ""} renderAnimation={renderAnimation} setInputValue={setInputValue}/>
+      <InputLine key={history.length} author={userName} className={typing ? "hidden" : ""} setInputValue={setInputValue}/>
 
     </>
   )

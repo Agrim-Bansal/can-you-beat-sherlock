@@ -72,7 +72,7 @@ body {
 .input{
   background: none;
   display: inline;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .input:focus{
