@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  height: 100%;
+  width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +19,62 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  font-size: 3vh;
+}
+
+.terminal{
+  background:var(--background);
+  color: #00ff37;
+  position: absolute;
+  height: 75vh;
+  width: 50vw;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 0px 5px #ffffff52;
+  border-radius: 2vh;
+  border : 1px solid #000;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  padding: 2%;
+  
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+  height: 90%;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+.input-line{
+  /* display: flex; */
+}
+.input-line-prompt{
+  width: fit-content;
+}
+
+.input{
+  background: none;
+  display: inline;
+  width: 100%;
+}
+
+.input:focus{
+  outline: none;
 }

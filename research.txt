@@ -1,0 +1,55 @@
+Inspiration 
+https://webflow.com/made-in-webflow/terminal
+
+https://evilprince2009.netlify.app/
+
+https://www.robscanlon.com/encom-boardroom/
+
+
+------
+useRef for focusing element
+Gemini search result 
+import React, { useRef, useEffect } from 'react';
+
+function MyComponent() {
+  const input1Ref = useRef(null);
+  const input2Ref = useRef(null);
+
+  const shiftFocus = () => {
+    if (input1Ref.current) {
+      input1Ref.current.focus();
+    } else if (input2Ref.current) {
+      input2Ref.current.focus();
+    }
+  };
+
+  return (
+    <div>
+      <input type="text" ref={input1Ref} />
+      <button onClick={shiftFocus}>Shift Focus</button>
+      <input type="text" ref={input2Ref} />
+    </div>
+  );
+}
+
+------
+
+------
+
+stack overflow refence for adding an eventlistener
+
+import { useEffect } from 'react'
+// etc...
+
+const useKeyDown = (handler, deps = []) => {
+  useEffect(() => {
+    document.addEventListener("keydown", handler);
+    // clean up
+    return () => {
+      document.removeEventListener("keydown", handler);
+    };
+  }, deps);
+};
+
+---------
+
