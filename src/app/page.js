@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import Line from "@/components/Line";
 import InputLine from "@/components/InputLine";
 import { useState, useEffect, use } from "react";
@@ -14,6 +13,8 @@ export default function Home() {
 
   const [history, setHistory] = useState([{author: "system", text: "Welcome to the chat!"}, {author:"system", text: "Type something and press enter to send a message."}]);
 
+  // Implement this function for all the possible input commands
+
   useEffect(() => {
     if (inputValue) {
       setHistory([...history, {author: userName, text: inputValue}]);
@@ -21,6 +22,8 @@ export default function Home() {
     }
   }, [inputValue]);
 
+
+  //---------------------------------------------------------------
 
   let historyElements = history.map((line, index) => {
     return (
@@ -31,7 +34,7 @@ export default function Home() {
   });
 
   historyElements[historyElements.length - 1] = (
-    <Line key={history.length*10000 + historyElements.length-1} author={history[history.length - 1].author} setTyping={setTyping} renderAnimation={true}>
+    <Line key={history.length*10000 + historyElements.length-1} author={history[history.length - 1].author} setTyping={setTyping} renderAnimation={history[history.length-1]=='system'&true}>
       {history[history.length - 1].text}
     </Line>
   );   

@@ -20,6 +20,7 @@ export default function InputLine({author, className, setInputValue}) {
         
         <span className="input-line-prompt">{author}{' >> '}</span>
         <input className="input-line-input input" ref={ref} onKeyDown={keydownHandler} />
+        
       </span>
     );
 }

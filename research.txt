@@ -53,3 +53,54 @@ const useKeyDown = (handler, deps = []) => {
 
 ---------
 
+
+
+create a murder mystery scenario with 1 victim and 4 viable suspects.
+This will be a game of detective where i, the user will ask you to assume a character and then question you. You have to try not to reveal the culprit in those question but give subtle hints.
+Give me a setup scene and short info about the victim and suspects
+
+-------------
+
+Okay, here's your murder mystery scenario:
+
+The Scene:
+
+The grand, oak-paneled library of Blackwood Manor is in disarray. Books lie scattered on the Persian rug, a single armchair is overturned, and the air hangs heavy with the scent of old paper and something metallic. Lying sprawled near the fireplace is the lifeless body of Lord Harrington Blackwood, 68 years of age, the eccentric and notoriously difficult owner of the manor. A single, ornate letter opener, usually kept on his desk, is plunged into his chest. It is clear this is not an accident. A raging storm beats against the windows of the isolated manor, trapping everyone inside.
+
+The Victim:
+
+Lord Harrington Blackwood: A wealthy and reclusive man known for his volatile temper, harsh judgments, and a habit of frequently altering his will. He was disliked by almost everyone he knew, and had a lot of enemies. He was a man of many enemies due to his business practices.
+
+The Suspects:
+
+Lady Eleanor Blackwood: Lord Blackwood's second wife, 45 years old. She is beautiful and refined, but rumors swirl about her extravagance and growing debt. She is known to have a sharp tongue, and was often the target of Lord Blackwood's criticism. She was rumoured to be involved with another man.
+
+Mr. Alistair Finch: Lord Blackwood's personal assistant, 32 years old. He's a quiet and efficient man, but seems unusually stressed and carries a visible bitterness toward his employer, who he worked for tirelessly for many years with little recognition. He is very clever, and always calm and collected.
+
+Miss Beatrice Blackwood: Lord Blackwood's niece, 26 years old. A struggling artist, she was recently cut off from her inheritance by her uncle after the sale of an expensive piece, and is now in dire need of funds. She was quite attached to her uncle until their falling out. She is a very emotional character.
+
+Dr. Thomas Ashworth: The family physician and close confidant, 50 years old. He has a gambling problem and was heavily in debt to Lord Blackwood. He has been treating Lord Blackwood for many years, and is a meticulous man.
+
+Now, you can begin your investigation. Ask me to assume the role of any of the suspects, and I will do my best to answer your questions while maintaining the mystery. Let me know who you would like to question first. Good luck, Detective!
+
+----------
+
+Assume the character of Lady Eleanor Blackwood and answer to the question with straight to point answer: "You know what this is about. Tell me your story". answer in a single paragraph.
+
+-----------
+
+I was in my chambers, tending to my correspondence, when the storm began. A servant came to inform me of the commotion, and I rushed to the library to find Harrington...like that. It was a dreadful scene. I barely knew what to do. Naturally, I was distraught by the suddenness and horror of it all. I've been here for many years now, and can't believe this happened in our own manor. I'm just as surprised and shocked as anyone.
+
+-----------
+
+Time to end the game. Reveal the killer. Just the name. And explanation in the next line also include how he was to be caught.
+
+-----------
+
+The killer is: Dr. Thomas Ashworth.
+
+Dr. Ashworth, deep in debt to Lord Blackwood and facing ruin, saw the murder as a desperate solution to his financial woes. The meticulous nature he possessed as a doctor lead him to be very precise in his action. He likely used his medical knowledge to ensure a quick and seemingly clean kill, using the letter opener as an opportune weapon. He was to be caught by observing him closely. His anxiety and nervous behavior would've been a giveaway. A close examination of the letter opener, which he had handled, would reveal his fingerprints, especially considering his profession would have very distinct markings of a surgeon. This would betray his claim of not having touched the murder weapon.
+
+------------  
+
+

@@ -27,7 +27,7 @@ export default function Line({ children, author="system", setTyping, renderAnima
         renderTimer = setTimeout(() => {
             setText(text.slice(0, currentIndex + 1) + "_");
             renderText(text, currentIndex + 1);
-        }, 50);
+        }, 100);
     }
 
     return (
