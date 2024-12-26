@@ -7,7 +7,7 @@ import { useState, useEffect, use } from "react";
 export default function Home() {
   const [typing, setTyping] = useState(true);
   const [renderAnimation, setRenderAnimation] = useState(true);
-  const [userName, setUserName] = useState("Agrim");
+  const [userName, setUserName] = useState("user");
   const [inputValue, setInputValue] = useState("");
 
 

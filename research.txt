@@ -103,4 +103,14 @@ Dr. Ashworth, deep in debt to Lord Blackwood and facing ruin, saw the murder as 
 
 ------------  
 
+Commands available : 
 
+To start game: boot userName no.OfSuspects 
+to leave game in middle : abandon / exit
+to end game with arrest : arrest suspectName
+to ask questions : interrogate suspectName question
+to clear terminal : clear
+to show info of suspect/vicitm : info name 
+help shows this list of available commands
+
+common functionality needed : 
