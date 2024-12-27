@@ -57,7 +57,7 @@ const useKeyDown = (handler, deps = []) => {
 
 create a murder mystery scenario with 1 victim and 4 viable suspects.
 This will be a game of detective where i, the user will ask you to assume a character and then question you. You have to try not to reveal the culprit in those question but give subtle hints.
-Give me a setup scene and short info about the victim and suspects
+Give me a setup scene and short info about the victim and suspects each in its own paragraph
 
 -------------
 
@@ -100,13 +100,21 @@ Time to end the game. Reveal the killer. Just the name. And explanation in the n
 The killer is: Dr. Thomas Ashworth.
 
 Dr. Ashworth, deep in debt to Lord Blackwood and facing ruin, saw the murder as a desperate solution to his financial woes. The meticulous nature he possessed as a doctor lead him to be very precise in his action. He likely used his medical knowledge to ensure a quick and seemingly clean kill, using the letter opener as an opportune weapon. He was to be caught by observing him closely. His anxiety and nervous behavior would've been a giveaway. A close examination of the letter opener, which he had handled, would reveal his fingerprints, especially considering his profession would have very distinct markings of a surgeon. This would betray his claim of not having touched the murder weapon.
+-----------
+
+final prompts
+create a modern and unique murder mystery scenario with 1 victim and ${suspects} viable suspects. \nThis will be a game of detective where i, the user will ask you to assume a character and then question you. You have to try not to reveal the culprit in those question but give subtle hints.\nGive me a setup scene and short info about the victim and suspects each in its own paragraph
+Assume the character of ${req.body.suspect} and answer to the question with straight to point answer: \"${req.body.question}\". answer in a single paragraph. If there exists no such person in the story, respond by saying that.
+Reveal the killer. Just the name. And a small explanation in the next line also include how he was to be caught.
+
 
 ------------  
 
 Commands available : 
 
-To start game: boot userName no.OfSuspects 
-to leave game in middle : abandon / exit
+To change name.
+To start game: start userName no.OfSuspects 
+to leave game in middle : exit
 to end game with arrest : arrest suspectName
 to ask questions : interrogate suspectName question
 to clear terminal : clear
@@ -114,3 +122,11 @@ to show info of suspect/vicitm : info name
 help shows this list of available commands
 
 common functionality needed : 
+
+
+--------------
+--------------
+
+Check the  number of suspect
+Matrix background
+An introduction

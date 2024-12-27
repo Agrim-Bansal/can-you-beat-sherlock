@@ -6,7 +6,6 @@ export default function InputLine({author, className, setInputValue}) {
 
     function keydownHandler(e) {
         if (e.key === "Enter") {
-            console.log("Enter pressed");
             setInputValue(e.target.value);
       }
     }

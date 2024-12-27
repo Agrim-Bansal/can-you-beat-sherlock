@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Can You Beat Sherlock?
 
-## Getting Started
+Welcome to **Can You Beat Sherlock?**, the game where you put your detective skills to the ultimate test! 🕵️‍♂️🔍
 
-First, run the development server:
+
+
+## Introduction
+Think you have what it takes to outsmart the world's greatest detective? Think again! This game will challenge your logic, wit, and patience. If you can solve these mysteries, you might just be the next Sherlock Holmes. Or at least, his slightly less impressive cousin.
+
+## Installation
+To get started, you'll need to clone this repository and install the necessary dependencies. It's easier than finding a needle in a haystack, we promise.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Agrim-Bansal/can-you-beat-sherlock.git
+cd can-you-beat-sherlock
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Gameplay
+1. **Start the Game**: Run the game using the command below. Make sure you have your thinking cap on!
+    ```bash
+    npm start
+    ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+2. **Solve Mysteries**: Write ` start <no. of suspects>` to generate a unique mystery story. Use your logical reasoning to solve the mystery. Remember, Sherlock is watching!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Proceed**: Interrogate suspects and gather clues to solve the mystery. You can ask suspects about their alibis, motives, and more. But be careful! You only have a limited number of questions.
 
-## Learn More
+4. **Available Commands** :
+- `start <no. of suspects>` : Start a new game with the specified number of suspects.
+- `interrogate "name of suspect" "question"` : Interrogate a suspect to gather clues.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Win**: If you manage to solve the mystery, congratulations! You've beaten Sherlock. Now go brag about it.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Good luck, detective! And remember, when you have eliminated the impossible, whatever remains, however improbable, must be the truth. 🕵️‍♀️
