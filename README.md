@@ -5,10 +5,19 @@ Welcome to **Can You Beat Sherlock?**, the game where you put your detective ski
 
 
 ## Introduction
-Think you have what it takes to outsmart the world's greatest detective? Think again! This game will challenge your logic, wit, and patience. If you can solve these mysteries, you might just be the next Sherlock Holmes. Or at least, his slightly less impressive cousin.
+Think you have what it takes to outsmart the world's greatest detective? Think again! This game will challenge your logic, wit, and patience. If you can solve these mysteries in this AI powered terminal themed game, you just might be as smart as The Sherlock Holmes.
+
+## Demo
+[ Visit Website ](https://can-you-beat-sherlock.vercel.app/)
+
+## Screenshota
+![Screenshot](./screenshots/ss1.png)
+![Screenshot](./screenshots/ss2.png)
+
+
 
 ## Installation
-To get started, you'll need to clone this repository and install the necessary dependencies. It's easier than finding a needle in a haystack, we promise.
+To get started, Clone this repository and install the necessary dependencies.
 
 ```bash
 git clone https://github.com/Agrim-Bansal/can-you-beat-sherlock.git
@@ -17,9 +26,16 @@ npm install
 ```
 
 ## Gameplay
-1. **Start the Game**: Run the game using the command below. Make sure you have your thinking cap on!
+1. **Start the Game**: 
+
+    get gemini api key from google ai studio and put it in .env file
+
+    GEMINI_API_KEY=< api key >
+
+    Then
+
     ```bash
-    npm start
+    npm run dev
     ```
 
 2. **Solve Mysteries**: Write ` start <no. of suspects>` to generate a unique mystery story. Use your logical reasoning to solve the mystery. Remember, Sherlock is watching!
