@@ -28,8 +28,52 @@ body {
   font-size: 2.75vh;
 }
 
+.backdrop{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000000a0;
+  display: flex;
+  filter: blur(0.25px);
+  justify-content: space-evenly;
+
+}
+
+.backdrop_layer{
+  width: 7.5px;
+  overflow: hidden;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+.backdrop_text{
+  filter: brightness(0.01);
+}
+
+.backdrop_overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 10vh;
+  width: 2vw;
+  background: transparent;
+  backdrop-filter: brightness(100);
+  translate: 0 -100%;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(calc(100vh + 100%));
+  }
+  
+}
+
 .terminal{
-  background:#000000a0;
+  background:#000000b9;
+  backdrop-filter: blur(2px);
   color: var(--foreground);
   position: absolute;
   height: 75vh;

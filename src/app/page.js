@@ -189,7 +189,7 @@ export default function Home() {
       [
         {role: "user",
           parts : [
-            {text : `create a modern and unique murder mystery scenario with 1 victim and ${suspects} viable suspects. \nThis will be a game of detective where i, the user will ask you to assume a character and then question you. You have to try not to reveal the culprit in those question but give subtle hints.\nGive me a setup scene and short info about the victim and suspects each in its own paragraph`}
+            {text : `create a modern and unique murder mystery scenario with 1 victim and ${suspects} viable suspects. \nThis will be a game of detective where i, the user will ask you to assume a character and then question you. You have to try not to reveal the culprit in those question but give subtle hints.\nGive me a setup scene and short info about the victim and suspects each in its own paragraph. separate the info about suspects with a new line.`}
           ]
         },
         {role: "model",
@@ -231,6 +231,7 @@ export default function Home() {
   }
 
   async function arrest(suspect){
+    setLoading(true);
     const response = await fetch('/api/genai', {
       method: 'POST',
       headers: {
@@ -238,8 +239,9 @@ export default function Home() {
       },
       body: JSON.stringify({function:'arrest', suspect: suspect, history:sessionHistory})
     }).then(response => response.json());
+    setLoading(false);
 
-    setHistory([...history, {author:userName, text:inputValue}, {author: "system", text: response.text}]);
+    setHistory([...history, {author:userName, text:inputValue}, {author: "system", text: response.text}, {author:"system", text: "Game ended."}]);
 
     setSessionHistory(
       [...sessionHistory,
@@ -253,11 +255,6 @@ export default function Home() {
             {text : response.text}
           ]
         },
-        { role: "system",
-          parts: [
-            {text: "Game ended."}
-          ]
-        }
       ]
     );
 

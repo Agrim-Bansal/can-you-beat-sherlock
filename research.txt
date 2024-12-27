@@ -106,7 +106,9 @@ final prompts
 create a modern and unique murder mystery scenario with 1 victim and ${suspects} viable suspects. \nThis will be a game of detective where i, the user will ask you to assume a character and then question you. You have to try not to reveal the culprit in those question but give subtle hints.\nGive me a setup scene and short info about the victim and suspects each in its own paragraph
 Assume the character of ${req.body.suspect} and answer to the question with straight to point answer: \"${req.body.question}\". answer in a single paragraph. If there exists no such person in the story, respond by saying that.
 Reveal the killer. Just the name. And a small explanation in the next line also include how he was to be caught.
+------------
 
+create a modern and unique murder mystery scenario with 1 victim and ${req.body.suspects} viable suspects. \nThis will be a game of detective where i, the user will ask you to assume a character and then question you. You have to try not to reveal the culprit in those question but give subtle hints.\nGive me a setup scene and short info about the victim and suspects each in its own paragraph. separate the info about suspects with a new line.
 
 ------------  
 
@@ -130,3 +132,6 @@ common functionality needed :
 Check the  number of suspect
 Matrix background
 An introduction
+
+---------------
+

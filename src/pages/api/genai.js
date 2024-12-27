@@ -36,7 +36,7 @@ export default async function Handler(req, res) {
       generationConfig,
       history: [],
     });
-    const result = await chatSession.sendMessage(`create a modern and unique murder mystery scenario with 1 victim and ${req.body.suspects} viable suspects. \nThis will be a game of detective where i, the user will ask you to assume a character and then question you. You have to try not to reveal the culprit in those question but give subtle hints.\nGive me a setup scene and short info about the victim and suspects each in its own paragraph`);
+    const result = await chatSession.sendMessage(`create a modern and unique murder mystery scenario with 1 victim and ${req.body.suspects} viable suspects. \nThis will be a game of detective where i, the user will ask you to assume a character and then question you. You have to try not to reveal the culprit in those question but give subtle hints.\nGive me a setup scene and short info about the victim and suspects each in its own paragraph. separate the info about suspects with a new line.`);
     
     res.status(200).json({ text: result.response.text() });
   }
