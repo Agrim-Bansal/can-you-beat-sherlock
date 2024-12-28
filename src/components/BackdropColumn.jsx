@@ -16,12 +16,12 @@ export default function BackdropColumn({index}) {
             Math.random() > 0.5 ?
             <>
              
-             <div className={`backdrop_overlay`} style={{left:index*2 + 'vw',   animation: `move 4s linear ${Math.random()*3}s infinite forwards `}}></div>
+             <div className={`backdrop_overlay`} style={{left:index*2 + 'vw',   animation: `move 4s linear ${Math.random()*4}s infinite forwards `}}></div>
             </>
             :
             <>
-             <div className={`backdrop_overlay`} style={{left:index*2 + 'vw',   animation: `move 4s linear ${Math.random()*3}s infinite forwards `}}></div>
-             <div className={`backdrop_overlay`} style={{left:index*2 + 'vw',   animation: `move 4s linear ${Math.random()*3}s infinite forwards `}}></div>
+             <div className={`backdrop_overlay`} style={{left:index*2 + 'vw',   animation: `move 4s linear ${Math.random()*4}s infinite forwards `}}></div>
+             <div className={`backdrop_overlay`} style={{left:index*2 + 'vw',   animation: `move 4s linear ${Math.random()*4}s infinite forwards `}}></div>
 
             </>
 

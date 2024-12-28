@@ -37,9 +37,9 @@ body {
 }
 
 .backdrop_layer{
-  width: 7.5px;
+  width: 10px;
   overflow: hidden;
-  font-size: 15px;
+  font-size: 20px;
   word-wrap: break-word;
 }
 
@@ -134,3 +134,4 @@ body {
   border-radius: 50%;
   z-index: 10;
 }
+

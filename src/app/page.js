@@ -9,7 +9,7 @@ export default function Home() {
   const initialHistory = [
     {
       author: "system",
-      text: "Welcome to this fun app where you put your logical skills to the test and solve a murder mystery. Can you defeat Sherlock?"
+      text: "Welcome ! and get ready to put your logical skills to the test and solve a murder mystery. Can you defeat Sherlock?"
     },
     {
       author: "system",
@@ -68,7 +68,7 @@ export default function Home() {
             break;
           }
 
-          if (args.length != 1 || args[0]=='') {
+          if (args.length != 1) {
             newHistory = newHistory.concat([{author: "system", text: "Incorrect usage."}, {author: "system", text: "Usage: start <no. of suspects>"}]);
             break;
           }
@@ -144,9 +144,12 @@ export default function Home() {
 
 
   function findArgs(text, args=[]){
+    text = text.trim();
     if (text.search('\"')!=-1) {
-      let arg1 = text.slice(1, text.slice(1).search('\"')+1);
-      let rest = text.slice(text.slice(1).search('\"')+2).trim();
+      let firstIndex = text.search('\"');
+      let secondIndex = firstIndex + 1 + text.slice(firstIndex+1).search('\"');
+      let arg1 = text.slice(firstIndex+1, secondIndex);
+      let rest = text.slice(0,firstIndex).trim() + ' ' + text.slice(secondIndex+1).trim();
       return findArgs(rest, [...args, arg1]);
     }else{
       if (text == ''){

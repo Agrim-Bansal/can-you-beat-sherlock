@@ -135,3 +135,4 @@ An introduction
 
 ---------------
 
+Debug the algorithm which extracts commands from input
