@@ -1,6 +1,7 @@
 import { Ubuntu_Mono } from "next/font/google";
 import "./globals.css";
 import BackdropColumn from "../components/BackdropColumn";
+import MouseOverlay from "@/components/MouseOverlay";
 
 const ubuntuMono = Ubuntu_Mono(
   {
@@ -26,7 +27,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${ubuntuMono.className} antialiased`}>
         <div className="backdrop">
+          
           {backdropColumns}
+
+          <MouseOverlay/>
+
           </div>
         <div className="terminal">
           {children}

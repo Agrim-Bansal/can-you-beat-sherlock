@@ -8,6 +8,7 @@
   ;
   height: 100%;
   width: 100%;
+  cursor: url('../../public/cursor.png') 42 21 , auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,7 +53,7 @@ body {
   left:0;
   height: 10vh;
   width: 2vw;
-  background: transparent;
+  background: linear-gradient(0deg, black 0%, transparent 50%, black 100%);
   backdrop-filter: brightness(100);
   translate: 0 -100%;
 }
@@ -93,6 +94,7 @@ body {
   background: none;
   display: inline;
   width: 80%;
+  cursor: text;
 }
 
 .input:focus{
@@ -109,6 +111,8 @@ body {
 
 .red{
   color: rgba(231, 0, 0);
+  text-shadow: 1px 0px 1px #00d4f993;
+  filter: brightness(1.5);
 }
 
 .yellow{
@@ -123,3 +127,13 @@ body {
   color: #00c8ff;
 }
 
+
+.mouseOverlay{
+  backdrop-filter: brightness(1000) ;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: radial-gradient(circle, transparent 10%, rgba(0,0,0,1) 100%);
+  border-radius: 50%;
+  z-index: 10;
+}
