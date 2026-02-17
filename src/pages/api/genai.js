@@ -5,7 +5,7 @@ import {GoogleGenerativeAI, HarmCategory, HarmBlockThreshold} from "@google/gene
 const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash-exp",
+  model: "gemini-flash-lite-latest",
   systemInstruction: "Do not acknowledge prompts in your response and do not break the fourth wall. Do not bold or bullet the text.",
 });
 
